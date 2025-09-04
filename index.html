@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KillDog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background: #1a1a1a;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .sidebar h2 {
+      color: red;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: #eee;
+      text-decoration: none;
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      background: red;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+      width: calc(100% - 240px);
+    }
+    h1, h2, h3 {
+      color: red;
+    }
+    .card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(255,0,0,0.4);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255,0,0,0.7);
+    }
+    .owner {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px 0;
+      box-shadow: 0 0 10px rgba(255,0,0,0.3);
+      text-align: center;
+    }
+    .owner img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid red;
+    }
+    .owner h3 {
+      margin: 10px 0 5px;
+      color: red;
+    }
+    .owner p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background: red;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #fff;
+      color: red;
+      transform: scale(1.1);
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>KillDog</h2>
+    <a href="#" onclick="showSection('home')">Главная</a>
+    <a href="#" onclick="showSection('contacts')">Контакты</a>
+  </div>
+
+  <div class="content">
+    
+    <div id="home" class="content-section">
+      <h1>Проект KillDog</h1>
+      <div class="card">
+        <p>
+          Проект под названием <b>Убийство собак (бичей)</b> — здесь ебут самых нищих и бичей.
+          Проект создан, чтобы защищать мирных от манядоксеров и нищих бичей.<br><br>
+          Owners: <b>@vk_killd</b> & <b>@WillyDead</b><br><br>
+          Мы хотим изменить КМ в лучшую сторону: сейчас в КМ все нищие, даже те, кто был популярен давно,
+          а теперь превратились в нищих.<br>
+          Все медийные личности выебаны.<br><br>
+          Но проект «Убийство собак (бичей)» даст ещё одну жизнь КМ.<br><br>
+          <b>Кратко о нас:</b><br>
+          Мы <b>@WillyDead</b> и <b>@Km_skam</b> познакомились этим летом, уже 3 месяца партнёрства.
+          За недельку ликвидировали 4 человека, оба вернулись в КМ.
+        </p>
+      </div>
+
+      <h2>Owners</h2>
+      <div class="owner">
+        <img src="photo_2025-09-04_12-24-25.jpg" alt="Willy">
+        <h3>Willy</h3>
+        <p><a href="https://t.me/oex_vk" target="_blank">@WillyDead</a></p>
+        <p>Добрый, не трогаю мирных.</p>
+        <p>Осинтер, ищет через: боты, знакомые, ВК, сайты, интернет, Google Dork, Doxbin, родители жертвы.</p>
+        <p>Все работы его клана в ТГК.</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-18-12.jpg" alt="frik">
+        <h3>frik</h3>
+        <p><a href="https://t.me/osintfrik" target="_blank">@osintfrik</a></p>
+        <p>Один из владельцев проекта KillDog.</p>
+        <p>В км (Discord) с 2023 года под ником <b>LEMON_BABYCHKA</b>, в км Telegram с 2024 под ником <b>KARMA</b>.</p>
+        <p>Сейчас ник — <b>frik</b>.</p>
+        <p>Специалист в сфере OSINT, каста: осинтер, доксер.</p>
+        <p>50+ ликвидаций.</p>
+      </div>
+
+      <h2>Участники проекта</h2>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-19-05.jpg" alt="Whkult">
+        <h3>Whkult⌬</h3>
+        <p>Coder. Знание языков: Python, JavaScript, HTML, CSS, C++.</p>
+        <p>OSINT разведка.</p>
+        <p>Писать сюда → <a href="https://t.me/Whkult3" target="_blank">@Whkult3</a></p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-20-38.jpg" alt="Александра Малинина">
+        <h3>Александра Малинина</h3>
+        <p><a href="https://t.me/MalinaUaDa" target="_blank">@MalinaUaDa</a></p>
+        <p>Не трогаю мирных, изучаю только OSINT.</p>
+        <p>Добрый вумен 😇</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-21-34.jpg" alt="падшаясмерть">
+        <h3>падшаясмерть</h3>
+        <p><a href="https://t.me/salamprisr" target="_blank">@salamprisr</a></p>
+        <p>Добрый, не трогаю мирных. Помогаю людям от скама.</p>
+        <p><b>50+ ликвидаций</b></p>
+        <p>Осинтер, ищу инфу: боты, знакомые, ВК, сайты.</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-22-31.jpg" alt="Ласвикс">
+        <h3>Ласвикс</h3>
+        <p><a href="https://t.me/fucklasqwx" target="_blank">@fucklasqwx</a></p>
+        <p>С 2021 года в км. OSINT, снос.</p>
+        <p>Защищаю мирных, помогаю от скама.</p>
+        <p><b>100+ ликвидаций</b></p>
+        <p>Со-владелец проекта «Убийство собак».</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-22-45.jpg" alt="Zzakonopos">
+        <h3>Zzakonopos</h3>
+        <p><a href="https://t.me/Zzakonopos" target="_blank">@Zzakonopos</a></p>
+        <p>OSINT. Ищу инфу через любую дырку в биографии.</p>
+        <p>Развиваюсь в других сферах жизни.</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-22-42.jpg" alt="ebisw">
+        <h3>ebisw</h3>
+        <p><a href="https://t.me/ebisw" target="_blank">@ebisw</a></p>
+        <p>Каста: осинтер.</p>
+        <p>Помогал клану: нашёл точный адрес тролля и заказал ей навоза на 250к.</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-22-39.jpg" alt="huqoz">
+        <h3>huqoz</h3>
+        <p><a href="https://t.me/huqoz" target="_blank">@huqoz</a></p>
+        <p>OSINT</p>
+      </div>
+      <div class="owner">
+        <img src="photo_2025-09-04_22-25-19.jpg" alt="kweqo">
+        <h3>kweqo</h3>
+        <p><a href="https://t.me/kweqo" target="_blank">@kweqo</a></p>
+        <p>Добрый осинтер, не трогаю мирных.</p>
+        <p>Совладелец клана.</p>
+      </div>
+    </div>
+
+    <!-- Контакты -->
+    <div id="contacts" class="content-section" style="display:none;">
+      <h2>Контакты</h2>
+      <p>Свяжитесь с нами через удобные площадки:</p>
+      <a href="https://t.me/PerehodnikKeDe" target="_blank" class="btn">Наш Telegram</a>
+      <a href="http://tiktok.com/@killfuckingdog" target="_blank" class="btn">Наш TikTok</a>
+    </div>
+  </div>
+</body>
+</html>
